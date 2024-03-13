@@ -17,10 +17,10 @@ class Fecha(private val dia: Int, private val mes: Int, private val anio: Int) {
     fun esValida(): Boolean {
         var esValida = false
 
-        if ((dia < 1 || dia > 31) && (mes < 1 || mes > 12)) {
+        if ((dia >= 1 || dia <= 31) && (mes >= 1 || mes <= 12)) {
             var diasMes = diasDelMes(mes)
             esValida = dia <= diasMes
-            return false
+
         }
 
        return esValida

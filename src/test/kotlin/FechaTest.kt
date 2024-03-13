@@ -16,38 +16,38 @@ class FechaTest {
 
     @Test
     fun valida() {
-        val fecha = Fecha(15, 13, 2023)
-        assertTrue (fecha.valida())
+        val fecha = Fecha(15, 12, 2023)
+        assertTrue (fecha.esValida())
     }
 
 
     @Test
     fun fechaInvalidaDia() {
         val fecha = Fecha(32, 5, 2022)
-        assertFalse (fecha.valida())
+        assertFalse (fecha.esValida())
     }
 
     @Test
     fun fechaInvalidaMes() {
         val fecha = Fecha(12, 13, 2021)
         // Assert.assertFalse(fecha.valida())
-        assertFalse (fecha.valida())
+        assertFalse (fecha.esValida())
     }
 
     @Test
     fun fechaInvalidaFebreroBisiesto() {
         val fecha = Fecha(29, 2, 2021)
-        assertFalse (fecha.valida())
+        assertFalse (fecha.esValida())
         println("Fecha invalida")
-        println(fecha.valida())
+        println(fecha.esValida())
     }
 
     @Test
     fun fechaValidaFebreroBisiesto() {
         val fecha = Fecha(29, 2, 2024)
-        assertTrue (fecha.valida())
+        assertTrue (fecha.esValida())
         println("Fecha valida Bisiesto")
-        println(fecha.valida())
+        println(fecha.esValida())
     }
 
 
